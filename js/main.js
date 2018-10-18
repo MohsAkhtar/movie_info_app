@@ -10,7 +10,7 @@ function getMovies(searchText) {
   console.log(searchText);
   // make a call to api using axios
   axios
-    .get("http://www.omdbapi.com/?s=" + searchText + "&apikey=8455bd77")
+    .get("https://www.omdbapi.com/?s=" + searchText + "&apikey=8455bd77")
     .then(response => {
       console.log(response);
       // add search result to array
@@ -55,7 +55,7 @@ function getMovie() {
 
   // make a call to api using axios
   axios
-    .get("http://www.omdbapi.com/?i=" + movieId + "&apikey=8455bd77")
+    .get("https://www.omdbapi.com/?i=" + movieId + "&apikey=8455bd77")
     .then(response => {
       console.log(response);
       let movie = response.data;
@@ -97,7 +97,7 @@ function getMovie() {
                     <h3>Plot</h3>
                     ${movie.Plot}
                     <hr>
-                    <a href="http://imdb.com/title/${
+                    <a href="https://imdb.com/title/${
                       movie.imdbID
                     }" target="_blank" class="btn btn-primary">View IMDB</a>
                     <a href="index.html" class="btn btn-default">Go Back To Search</a>
